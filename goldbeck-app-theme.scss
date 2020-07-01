@@ -1,0 +1,116 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$md-gbpaletteprimary: (
+    50 : #e0eaf3,
+    100 : #b3cbe2,
+    200 : #80a9cf,
+    300 : #4d87bc,
+    400 : #266dad,
+    500 : #00539f,
+    600 : #004c97,
+    700 : #00428d,
+    800 : #003983,
+    900 : #002972,
+    A100 : #a1baff,
+    A200 : #6e95ff,
+    A400 : #3b70ff,
+    A700 : #215eff,
+    background: red,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$md-gbpalettesecondary: (
+    50 : #e7f6fc,
+    100 : #c2e9f7,
+    200 : #9adbf2,
+    300 : #71ccec,
+    400 : #52c1e8,
+    500 : #34b6e4,
+    600 : #2fafe1,
+    700 : #27a6dd,
+    800 : #219ed9,
+    900 : #158ed1,
+    A100 : #ffffff,
+    A200 : #cfecff,
+    A400 : #9cd9ff,
+    A700 : #82cfff,
+    background: red,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-gbpalettegrey: (
+    50 : #fafafa,
+    100 : #f5f5f5,
+    200 : #eeeeee,
+    300 : #cccccc,
+    400 : #adadad,
+    500 : #9e9e9e,
+    600 : #757575,
+    700 : #5f5f5f,
+    800 : #2d2d2d,
+    900 : #1d1d1d,
+    A100 : #cc6300,
+    A200 : #d74747,
+    A400 : #eb0000,
+    A700 : #d10000,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+
+$goldbeck-palette-primary: mat-palette($md-gbpaletteprimary);
+$goldbeck-palette-accent: mat-palette($md-gbpalettesecondary);
+$goldbeck-palette-grey: mat-palette($md-gbpalettegrey);
+
+$goldbeck-app-warn: mat-palette($mat-red);
+
+$goldbeck-app-theme: mat-light-theme($goldbeck-palette-primary, $goldbeck-palette-accent,
+ $goldbeck-app-warn);
+
+@include angular-material-theme($goldbeck-app-theme);
