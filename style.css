@@ -1,3 +1,136 @@
-h1, p {
-  font-family: Lato;
+@import "compass";
+@import '~@angular/material/theming';
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import 'goldbeck-app-theme.scss';
+
+
+html{
+
+  margin:0px; padding:0px;
+}
+body { 
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;  
+    background-color: transparent;
+  }
+  .main-bg{
+    display:block;
+    z-index: 0;
+    background: 0
+    url(assets/ground_webkit.jpg); 
+    
+    background-blend-mode: 
+    soft-light,
+    hue,
+    soft-light,
+    normal;   
+    background-attachment: fixed;   
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    flex: 1;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    .main-bg {
+      display:block;
+      z-index: 0;
+      background: 0
+      url(assets/img/DSV_Halle_0871_11_webkit.jpg);
+      background-attachment: fixed;   
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;    
+      flex: 1;
+    }
+  }
+
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header{
+  z-index: 1;
+  position:fixed; 
+  width:100%; 
+  height:60px; 
+  background:rgba(0,0,0,0.1);
+}
+
+header a{
+  color:white;
+  background:rgba(0,0,0,0.1); 
+  display:inline-block; 
+  padding:0px 30px; 
+  height:60px;
+  line-height:60px; 
+  text-align:center;
+  font-family: 'Roboto Slab', serif; 
+  text-decoration:none;
+  text-transform:uppercase; 
+  letter-spacing:2px; 
+  font-weight:700;
+}
+#hero1{
+ background:url(http://4.bp.blogspot.com/_AQ0vcRxFu0A/S9shDGGyMTI/AAAAAAAAAYk/kn3WTkY2LoQ/s1600/IMG_0714.JPG);
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+}
+#hero2{background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/21555/Melissani-cave-natural.jpg);
+  background-size:cover;
+  background-position:center center;
+  background-attachment:fixed;
+}
+.hero, .content{
+  text-align:center; 
+  position:relative;
+  width: 100%;
+}
+
+.inner{
+  min-height:600px;
+  position: relative;
+}
+
+.hero .inner{
+  background: rgba(0,0,0,0.7) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;}
+
+
+.copy{
+  position:absolute; 
+  top:50%; 
+  height:10em; 
+  margin-top:-5em; 
+  width:100%;
+}
+
+.hero h1, .hero p{ 
+  color:#fff;
+}
+
+.content h1, .content p{
+  color:#333;
+}
+
+h1{
+  margin:0px;
+  font-family: 'Roboto Slab', serif;
+  font-weight:400;
+  font-size:32px;
+  padding:0px 20px;
+}
+
+p{
+  font-family: 'Noto Sans', sans-serif; 
+  font-size:14px;
+  padding:0px 20px;
 }
